@@ -11,7 +11,6 @@
 <script>
 import Header from "./Header.vue";
 import Footer from "./Footer.vue";
-
 import PokemonDetails from "./PokemonDetails.vue";
 
 export default {
