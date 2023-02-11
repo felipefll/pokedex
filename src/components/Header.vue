@@ -179,7 +179,7 @@ header {
         outline: none;
         color: #0a2351;
         background: #f0f8ff;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
       }
 
       button {
