@@ -70,7 +70,7 @@
   </section>
   <section>
     <div>
-      <h1>Evoluções do Pokémon</h1>
+      <!-- <h1>Evoluções do Pokémon</h1> -->
       <ul>
         <li v-for="evolution in evolutions">
           {{ evolution.species.name }}
