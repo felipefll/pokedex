@@ -68,15 +68,41 @@
       </div>
     </div>
   </section>
+  <section>
+    <div>
+      <h1>Evoluções do Pokémon</h1>
+      <ul>
+        <li v-for="evolution in evolutions">
+          {{ evolution.species.name }}
+        </li>
+      </ul>
+    </div>
+  </section>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 import store from "../store/index.js";
+import axios from "axios";
 
 export default {
   name: "PokemonDetails",
   components: {},
+  data() {
+    return {
+      evolutions: [],
+    };
+  },
+  mounted() {
+    axios
+      .get("https://pokeapi.co/api/v2/evolution-chain/{id}/")
+      .then((response) => {
+        this.evolutions = response.data.evolutions;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
 
   setup() {
     function closeDetail() {
